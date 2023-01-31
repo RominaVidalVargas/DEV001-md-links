@@ -10,11 +10,11 @@ describe('isValidRoute', () => {
         expect(typeof main.isValidRoute).toBe('function');
     });
 
-    it('deberia retornar true si la ruta existe', () => {
+    it('deberia retornar true si existe la ruta', () => {
         expect(main.isValidRoute(routeTrue)).toBe(true);
     });
 
-    it('deberia retornar false si la ruta no existe', () => {
+    it('deberia retornar false si no existe la ruta', () => {
         expect(main.isValidRoute(routeFalse)).toBe(false);
     });
 });
@@ -25,11 +25,11 @@ describe('es una funcion', () => {
 
     expect(typeof main.getAbsoluteRoute).toBe('function');
 
-    it('deberia reornar true si la ruta es absoluta', () => {
+    it('deberia retornar true si es absoluta', () => {
 
         expect(main.getAbsoluteRoute(absoluteRoute)).toBe(true);
     });
-    it('deberia retornar false si la ruta no es absoluta', () => {
+    it('deberia retornar false si no es absoluta', () => {
         expect(main.getAbsoluteRoute(routeTrue)).toBe(false);
     });
 });

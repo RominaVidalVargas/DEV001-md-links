@@ -19,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/algomio2000/DEV001-md-links.git"
+    "url": "git+https://github.com/RominaVidalVargas/DEV001-md-links.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/algomio2000/DEV001-md-links/issues"
+    "url": "https://github.com/RominaVidalVargas/DEV001-md-links/issues"
   },
-  "homepage": "https://github.com/algomio2000/DEV001-md-links#readme",
+  "homepage": "https://github.com/RominaVidalVargas/DEV001-md-links#readme",
   "dependencies": {
     "jest": "^29.3.1"
   }
