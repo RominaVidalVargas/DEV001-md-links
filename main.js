@@ -14,27 +14,25 @@ const isValidRoute = (inputpath) => {
 //ruta es absoluta o no
 const getAbsoluteRoute = (inputpath) => {
     if (path.isAbsolute(inputpath)) {
-        return true;
-    }else{
-        return false;
-    }
-   };
+        return inputpath;
+    } else {
 //convertir en absoluta
-   const changefAbsoluteRoute = (inputpath)=>{
-   return path.resolve(inputpath);
-   }
+        return path.resolve(inputpath);
+    }
+};
 
+/* 
 const pathIsDirectory = (inputpath) => {
     return fs.lstatSync(inputpath).isDirectory()
-}
-  //es archivo
-  const pathIsFile = function (inputpath){
+} */
+
+//es archivo
+const pathIsFile = function (inputpath) {
     return fs.statSync(inputpath).isFile()
-  }
-  
+}
+
 
 module.exports = {
     isValidRoute,
     getAbsoluteRoute,
-    changefAbsoluteRoute
 };

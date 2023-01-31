@@ -1,5 +1,5 @@
 const {mdLinks}= require('./index');
-mdLinks('/noexiste/').then(()=>{})
+mdLinks('./README.md').then(()=>{})
 .catch((error)=>{
     console.log(error)
 });
