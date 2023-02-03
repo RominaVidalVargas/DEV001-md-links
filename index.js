@@ -12,6 +12,7 @@ const mdLinks = (path, options) => {
       console.log(absoluteRoute)
       resolve(absoluteRoute)
       // convertir ruta absoluta
+  
       //ruta es archivo
       //es archivo md
 
@@ -26,5 +27,5 @@ const mdLinks = (path, options) => {
 }
 
 module.exports = {
-  mdLinks,
+  mdLinks, 
 };
