@@ -19,13 +19,14 @@ const convertToAbsolute = (filePath) => {
         return absolutePath;
      }
      };
-
-//es archivo md??
+console.log('HOLA', convertToAbsolute('README.md'))
+//validcar archivo md
 const fileMd = (filePath) => {
     return (path.extname(filePath) === ".md");
+
  };
 
 
 module.exports = {
-    isValidRoute,
+    isValidRoute, convertToAbsolute, 
 };

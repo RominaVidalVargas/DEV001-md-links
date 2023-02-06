@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { getAbsoluteRoute } = require('./main.js');
+const { convertToAbsolute } = require('./main.js');
 
 
 const mdLinks = (path, options) => {
@@ -8,7 +8,7 @@ const mdLinks = (path, options) => {
     //ruta existe
     if (fs.existsSync(path)) {
       //es absoluta?
-      const absoluteRoute = getAbsoluteRoute(path)
+      const absoluteRoute = convertToAbsolute(path)
       console.log(absoluteRoute)
       resolve(absoluteRoute)
       // convertir ruta absoluta

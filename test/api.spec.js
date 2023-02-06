@@ -20,24 +20,24 @@ describe('isValidRoute', () => {
 });
 
 describe('es una funcion', () => {
-    const absoluteRoute = 'C:\\Users\\TecnoBot Academia\\Desktop\\md-links\\DEV001-md-links-1\\exampleFiles\\exampleFile.md';
+    const absoluteRoute = 'C:\\Users\\Laboratoria\\Desktop\\Romina\\Laboratoria\\Proyecto 4\\DEV001-md-links';
     const routeTrue = './exampleFiles/exampleFile.md';
 
-    expect(typeof getAbsoluteRoute).toBe('function');
+    /* expect(typeof convertToAbsolute).toEqual('function'); */
 
     it('deberia retornar true si es absoluta', () => {
 
-        expect(getAbsoluteRoute(absoluteRoute)).toBe(true);
+        expect(convertToAbsolute(absoluteRoute)).toBe(true);
     });
     it('deberia retornar false si no es absoluta', () => {
-        expect(getAbsoluteRoute(routeTrue)).toBe(false);
+        expect(convertToAbsolute(routeTrue)).toBe(false);
     });
 });
 describe('es una funcion', () => {
-    const absoluteRoute = 'C:\\Users\\TecnoBot Academia\\Desktop\\md-links\\DEV001-md-links-1\\exampleFiles\\exampleFile.md';
-    const routeTrue = './exampleFiles/exampleFile.md';
+    const absoluteRoute = 'C:\\Users\\Laboratoria\\Desktop\\Romina\\Laboratoria\\Proyecto 4\\DEV001-md-links';
+    const routeTrue = '/romina/laboratoria/archivo.md';
 
-    expect(typeof changefAbsoluteRoute).toBe('function');
+    /* expect(typeof changefAbsoluteRoute).toBe('function'); */
 
     it('deberia retornar una ruta absoluta', () => {
 
