@@ -1,47 +1,30 @@
-const main = require('../main.js');
-const path = require('path');
+const { main } = require('../main.js');
+const { path }= require('path');
+const { fileMd , convertToAbsolute } = require('../main.js');
 
-describe('isValidRoute', () => {
+describe('absolutePath', () => {
+    it('debe cambiar la ruta a absoluta si es relativa', () => {
+        convertToAbsolute('./README.md');
+      expect(convertToAbsolute('./README.md')).toEqual('C:\\Users\\Laboratoria\\Desktop\\Romina\\Laboratoria\\Proyecto 4\\DEV001-md-links\\README.md');
+    });
+    it('debe devolver la ruta si ya es absoluta', () => {
+        convertToAbsolute('romina/laboratoria/archivo.md');
+      expect(convertToAbsolute("C:\\Users\\Laboratoria\\Desktop\\Romina\\Laboratoria\\Proyecto 4\\DEV001-md-links\\with-links.md")).toEqual('C:\\Users\\Laboratoria\\Desktop\\Romina\\Laboratoria\\Proyecto 4\\DEV001-md-links\\with-links.md');
+    });
+  });
 
-    const routeTrue = './exampleFiles/exampleFile.md';
-    const routeFalse = './thisPath/doesNotExist';
+//test de función fileMd
 
-    it('should be a function', () => {
-        expect(typeof isValidRoute).toBe('function');
+describe('fileMd', () => {
+    
+    const PathLinksMd = "C:\\Users\\Laboratoria\\Desktop\\Romina\\Laboratoria\\Proyecto 4\\DEV001-md-links\\with-links.md";
+    const PathNoLinksMd = "C:\\Users\\Laboratoria\\Desktop\\Romina\\Laboratoria\\Proyecto 4\\DEV001-md-links\\no-links.txt";
+
+    it('Debería retornar true si el archivo contiene links MD', () => {
+        expect(fileMd(PathLinksMd)).toBe(true);
     });
 
-    it('deberia retornar true si existe la ruta', () => {
-        expect(isValidRoute(routeTrue)).toBe(true);
+    it('Debería retornar false si el archivo no contiene links MD', () => {
+        expect(fileMd(PathNoLinksMd)).toBe(false);
     });
-
-    it('deberia retornar false si no existe la ruta', () => {
-        expect(isValidRoute(routeFalse)).toBe(false);
-    });
-});
-
-describe('es una funcion', () => {
-    const absoluteRoute = 'C:\\Users\\Laboratoria\\Desktop\\Romina\\Laboratoria\\Proyecto 4\\DEV001-md-links';
-    const routeTrue = './exampleFiles/exampleFile.md';
-
-    /* expect(typeof convertToAbsolute).toEqual('function'); */
-
-    it('deberia retornar true si es absoluta', () => {
-
-        expect(convertToAbsolute(absoluteRoute)).toBe(true);
-    });
-    it('deberia retornar false si no es absoluta', () => {
-        expect(convertToAbsolute(routeTrue)).toBe(false);
-    });
-});
-describe('es una funcion', () => {
-    const absoluteRoute = 'C:\\Users\\Laboratoria\\Desktop\\Romina\\Laboratoria\\Proyecto 4\\DEV001-md-links';
-    const routeTrue = '/romina/laboratoria/archivo.md';
-
-    /* expect(typeof changefAbsoluteRoute).toBe('function'); */
-
-    it('deberia retornar una ruta absoluta', () => {
-
-        expect(changefAbsoluteRoute(routeTrue)).toBe(absoluteRoute);
-    });
-
-});
+})

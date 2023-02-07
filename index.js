@@ -12,7 +12,7 @@ const mdLinks = (path, options) => {
       console.log(absoluteRoute)
       resolve(absoluteRoute)
       // convertir ruta absoluta
-  
+
       //ruta es archivo
       //es archivo md
 
@@ -20,12 +20,8 @@ const mdLinks = (path, options) => {
       //si no existe la ruta rechaza la promesa
       reject('La ruta no es valida');
     }
-
-
   });
-
 }
-
 module.exports = {
-  mdLinks, 
+  mdLinks,
 };
