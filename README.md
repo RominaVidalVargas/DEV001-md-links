@@ -1,6 +1,8 @@
 # Markdown Links
+##Diagrama de Flujo
 
 ## Índice
+![Diagrama de Flujo](https://user-images.githubusercontent.com/114014708/220704230-41b05752-68ab-4204-8f4e-c2f722e45f50.png)
 
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
