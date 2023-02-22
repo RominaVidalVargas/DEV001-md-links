@@ -20,11 +20,11 @@ describe('fileMd', () => {
     const PathLinksMd = "C:\\Users\\Laboratoria\\Desktop\\Romina\\Laboratoria\\Proyecto 4\\DEV001-md-links\\with-links.md";
     const PathNoLinksMd = "C:\\Users\\Laboratoria\\Desktop\\Romina\\Laboratoria\\Proyecto 4\\DEV001-md-links\\no-links.txt";
 
-    it('Debería retornar true si el archivo contiene links MD', () => {
+    it('retornar true si archivo contiene links MD', () => {
         expect(fileMd(PathLinksMd)).toBe(true);
     });
 
-    it('Debería retornar false si el archivo no contiene links MD', () => {
+    it('retornar false si archivo no contiene links MD', () => {
         expect(fileMd(PathNoLinksMd)).toBe(false);
     });
 })

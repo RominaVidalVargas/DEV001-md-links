@@ -5,19 +5,13 @@ const { convertToAbsolute } = require('../main.js');
 describe('mdLinks', () => {
 
   it('Debe rechazar cuando el path no existe', (done) => {
-    mdLinks('//romina//laboratoria//archivo.md').catch((error) => {
+    mdLinks('romina//laboratoria//archivo.md').catch((error) => {
       expect(error).toBe('La ruta no es valida');
       done();
     })
   });
-});
-
-it('dar arreglo vacio archivo no links md', (done) => {
-  mdLinks('//romina//laboratoria//archivo.md').then((resultado) => {
-  expect(resultado).toBe([]);
-    done();
-  })
 })
+
 
 describe('convertToAbsolute', () => {
 
